@@ -4,6 +4,7 @@
 Description
 """
 from tornado.web import RequestHandler
+from models.rcm import RCM
 
 __author__ = 'awang'
 
@@ -14,4 +15,8 @@ class DYW(RequestHandler):
 
     def get(self, *args, **kwargs):
         """"""
-        self.render('dyw.html')
+        title = RCM.get('hp_tl')
+        data = dict(
+            title=title,
+        )
+        self.render('dyw.html', **data)
