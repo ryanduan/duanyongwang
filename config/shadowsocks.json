@@ -1,0 +1,10 @@
+{
+    "server":"139.162.24.62",
+    "server_port":6666,
+    "local_address": "127.0.0.1",
+    "local_port":7777,
+    "password":"duanyong.wang",
+    "timeout":600,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
