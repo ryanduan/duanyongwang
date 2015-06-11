@@ -3,20 +3,21 @@
 """
 Description
 """
-from tornado.web import RequestHandler
+from controller.base_controller import BaseController
 from models.rcm import RCM
 
 __author__ = 'awang'
 
 
-class DYW(RequestHandler):
+class DYW(BaseController):
     """"""
     url = r'/?'
 
     def get(self, *args, **kwargs):
         """"""
-        title = RCM.get('hp_tl')
+        title = 'T'
         data = dict(
             title=title,
+            user=self.current_user,
         )
         self.render('dyw.html', **data)

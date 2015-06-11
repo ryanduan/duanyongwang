@@ -17,6 +17,7 @@ import tornado.ioloop
 from models.dao import Dao
 
 from controller.dyw_controller import DYW
+from controller.auth import AuthController
 
 
 class Application(tornado.web.Application):
@@ -27,11 +28,14 @@ class Application(tornado.web.Application):
         urls = [
             # (Controller.url, controller),
             (DYW.url, DYW),
+            (AuthController.url, AuthController),
         ]
         settings = dict(
             xsrf_cookies=False,
             template_path='template',
             static_path='static',
+            cookie_domain='.duanyong.wang',
+            cookie_secret='de635135f4d0a75bc8368d5760d0b953',
         )
         tornado.web.Application.__init__(self, urls, **settings)
 

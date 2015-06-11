@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<!-- 引入bootstrap组件， Import bootstrap -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	{% block head %}{% end %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}I am base template{% end %}</title>
+</head>
+<body>
+	<div class="container">
+		{% block container %}{% end %}
+	</div>
+</body>
+</html>
